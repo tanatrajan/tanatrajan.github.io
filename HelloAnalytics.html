@@ -36,11 +36,12 @@
 
     gapi.auth.authorize(authData, function(response) {
       var authButton = document.getElementById('auth-button');
+      
       if (response.error) {
         authButton.hidden = false;
       }
       else {
-        authButton.hidden = true;
+        //authButton.hidden = true;
         queryAccounts();
       }
     });
